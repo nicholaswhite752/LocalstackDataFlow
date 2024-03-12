@@ -2,7 +2,7 @@
 awslocal kinesis put-record \
     --stream-name lambda-stream-input \
     --partition-key 1 \
-    --data "Hello Hello"
+    --data "Hello Testing"
 
 awslocal dynamodb scan --table-name table01 --region us-east-1
 

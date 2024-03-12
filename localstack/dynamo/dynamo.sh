@@ -4,9 +4,11 @@ echo "Starting Script"
 awslocal dynamodb create-table \
     --table-name table01 \
     --key-schema \
-        AttributeName=id,KeyType=HASH \
+         AttributeName=id,KeyType=HASH \
+         AttributeName=timestamp,KeyType=RANGE \
     --attribute-definitions \
         AttributeName=id,AttributeType=S \
+        AttributeName=timestamp,AttributeType=S \
     --billing-mode PAY_PER_REQUEST \
     --region us-east-1
 

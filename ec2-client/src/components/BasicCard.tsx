@@ -18,7 +18,7 @@ export default function BasicCard(props: any) {
   return (
     <Card className="mt-2 mb-2" sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 28 }} color="text.secondary" gutterBottom>
           {props.title}
         </Typography>
         {dataInCard}

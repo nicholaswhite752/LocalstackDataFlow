@@ -20,7 +20,10 @@ def lambda_handler(event, context):
 
     for record in event['Records']:
        
-       id = uuid.uuid4()
+       #id = uuid.uuid4()
+       # Dynamo does not like different partition and sort keys when wanting to sort by timestamp sort key
+       # Would be better to do this in RDS, but localstack FREE does not currently support that
+       id = "LambdaValues"
        time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
        #Kinesis data is base64 encoded so decode here
        payload=base64.b64decode(record["kinesis"]["data"])
