@@ -11,7 +11,7 @@ awslocal lambda create-function \
     --function-name localstack-lambda \
     --runtime python3.9 \
     --zip-file "fileb://function.zip" \
-    --handler main.lambda_handler  \
+    --handler lambda-code.lambda_handler  \
     --role arn:aws:iam::000000000000:role/lambda-role
 
 # Gets kinesis arn for stream input
