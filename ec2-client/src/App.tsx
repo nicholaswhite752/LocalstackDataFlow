@@ -83,9 +83,9 @@ export default function Home() {
         <h2 className="text-2xl font-bold underline pt-2 pb-2">
           Dynamo DB Data Response (LAST 25 INSERTED)
         </h2>
-      </div>
-      <div className="p-4 inline-block">
-        {CardsAll}
+        <div className="p-4 inline-block">
+          {CardsAll}
+        </div>
       </div>
     </div>
 
